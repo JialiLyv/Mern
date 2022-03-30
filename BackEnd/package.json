@@ -1,0 +1,41 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "This is a Mern demo",
+  "main": "app.js",
+  "scripts": {
+    "app": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon server.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JialiLyv/Mern.git"
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "Jiali Lu 21135614",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JialiLyv/Mern/issues"
+  },
+  "homepage": "https://github.com/JialiLyv/Mern#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

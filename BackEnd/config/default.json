@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb://jiali:6d9V7SWPONU4fSdW@merndb-shard-00-00.gxb3j.mongodb.net:27017,merndb-shard-00-01.gxb3j.mongodb.net:27017,merndb-shard-00-02.gxb3j.mongodb.net:27017/MernDB?ssl=true&replicaSet=atlas-56wf32-shard-0&authSource=admin&retryWrites=true&w=majority"
+}
