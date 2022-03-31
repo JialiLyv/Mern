@@ -4,11 +4,12 @@
   "description": "This is a Mern demo",
   "main": "app.js",
   "scripts": {
-    "start": "cd client && npm start",
-    "build": "echo 1 && node app.js",
-    "install-client": "echo 2 &&node app.js",
-    "heroku-postbuild": "echo 3 &&node app.js",
-    "server": "echo 3 && node app.js"
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon server.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
   },
   "repository": {
     "type": "git",
