@@ -5,9 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "cd client && npm start",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "build": "node app.js",
+    "install-client": "node app.js",
+    "heroku-postbuild": "node app.js",
     "server": "node app.js"
   },
   "repository": {
