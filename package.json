@@ -4,7 +4,7 @@
   "description": "This is a Mern demo",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon sever.js",
+    "start": "cd client && npm start",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
